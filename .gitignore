@@ -1,0 +1,15 @@
+.code
+.idea
+
+
+*.log
+/vendor
+
+/public_html/install/
+
+/public_html/image/cache/*
+!/public_html/image/cache/.gitkeep
+/public_html/image/catalog/*
+!/public_html/image/catalog/.gitkeep
+/public_html/image/payment/*
+!/public_html/image/payment/.gitkeep

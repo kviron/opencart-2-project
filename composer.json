@@ -1,0 +1,28 @@
+{
+  "name": "kviron/opencart-2-project",
+  "type": "project",
+  "description": "OpenCart 2",
+  "keywords": ["opencart", "ecommerce", "framework", "opensource"],
+  "license": "GPL-3.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "require": {
+    "mnsami/composer-custom-directory-installer": "2.*",
+    "kviron/opencart-2": "2.3.1"
+  },
+  "extra":{
+    "installer-paths":{
+      "./public_html/": ["kviron/opencart-2"]
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "php -r \"copy('public_html/config-dist.php', 'public_html/config.php');\"",
+      "php -r \"copy('public_html/admin/config-dist.php', 'public_html/admin/config.php');\""
+    ]
+  }
+}
